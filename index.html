@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Learning for Kids</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        .letter-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 60px;
+            font-weight: bold;
+            color: #ff6f61;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .letter-box:hover {
+            background-color: #ffe6e1;
+        }
+        .image-container {
+            margin-top: 20px;
+            width: 300px;  /* Increased width */
+            height: 300px; /* Increased height */
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        #letter-image {
+            width: 250px;  /* Increased image width */
+            height: 250px; /* Increased image height */
+            object-fit: contain; /* Ensure images are not distorted */
+        }
+        .spelling {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6f61;
+        }
+        .letter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .letter-container button {
+            padding: 15px 30px;
+            font-size: 30px;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .letter-container button:hover {
+            background-color: #e85c4d;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABC Learning for Kids</h1>
+    <div id="letter-box" class="letter-box">A</div>
+    <div id="image-container" class="image-container">
+        <img id="letter-image" src="" alt="Image" />
+    </div>
+    <div id="spelling" class="spelling"></div> <!-- Display the spelling here -->
+    <div class="letter-container">
+        <button onclick="showLetter('A')">A</button>
+        <button onclick="showLetter('B')">B</button>
+        <button onclick="showLetter('C')">C</button>
+        <button onclick="showLetter('D')">D</button>
+        <button onclick="showLetter('E')">E</button>
+        <button onclick="showLetter('F')">F</button>
+        <button onclick="showLetter('G')">G</button>
+        <button onclick="showLetter('H')">H</button>
+        <button onclick="showLetter('I')">I</button>
+        <button onclick="showLetter('J')">J</button>
+        <button onclick="showLetter('K')">K</button>
+        <button onclick="showLetter('L')">L</button>
+        <button onclick="showLetter('M')">M</button>
+        <button onclick="showLetter('N')">N</button>
+        <button onclick="showLetter('O')">O</button>
+        <button onclick="showLetter('P')">P</button>
+        <button onclick="showLetter('Q')">Q</button>
+        <button onclick="showLetter('R')">R</button>
+        <button onclick="showLetter('S')">S</button>
+        <button onclick="showLetter('T')">T</button>
+        <button onclick="showLetter('U')">U</button>
+        <button onclick="showLetter('V')">V</button>
+        <button onclick="showLetter('W')">W</button>
+        <button onclick="showLetter('X')">X</button>
+        <button onclick="showLetter('Y')">Y</button>
+        <button onclick="showLetter('Z')">Z</button>
+    </div>
+
+    <script>
+        // Function to update the letter box, display the image, and show the spelling related to the letter
+        function showLetter(letter) {
+            // Change the letter in the letter box
+            document.getElementById('letter-box').innerText = letter;
+
+            // Show the corresponding image for the letter
+            const imageContainer = document.getElementById('image-container');
+            const image = document.getElementById('letter-image');
+            const spelling = document.getElementById('spelling');
+            let wordToPronounce = '';
+            let pronunciation = '';
+
+            switch(letter) {
+                case 'A':
+                    image.src = 'images/apple.jpg';  // Use an apple image for "A"
+                    spelling.innerText = "Apple";  // Display the spelling
+                    wordToPronounce = "Apple";  // Set the word to pronounce
+                    pronunciation = "A for Apple"; // Pronounce the letter followed by the word
+                    break;
+                case 'B':
+                    image.src = 'images/ball.jpg';  // Use a ball image for "B"
+                    spelling.innerText = "Ball";   // Display the spelling
+                    wordToPronounce = "Ball";   // Set the word to pronounce
+                    pronunciation = "B for Ball"; // Pronounce the letter followed by the word
+                    break;
+                case 'C':
+                    image.src = 'images/cat.jpg';   // Use a cat image for "C"
+                    spelling.innerText = "Cat";    // Display the spelling
+                    wordToPronounce = "Cat";    // Set the word to pronounce
+                    pronunciation = "C for Cat";    // Pronounce the letter followed by the word
+                    break;
+                case 'D':
+                    image.src = 'images/dog.jpg';   // Use a dog image for "D"
+                    spelling.innerText = "Dog";    // Display the spelling
+                    wordToPronounce = "Dog";    // Set the word to pronounce
+                    pronunciation = "D for Dog";    // Pronounce the letter followed by the word
+                    break;
+                case 'E':
+                    image.src = 'images/elephant.jpg'; // Use an elephant image for "E"
+                    spelling.innerText = "Elephant"; // Display the spelling
+                    wordToPronounce = "Elephant"; // Set the word to pronounce
+                    pronunciation = "E for Elephant"; // Pronounce the letter followed by the word
+                    break;
+                case 'F':
+                    image.src = 'images/fish.jpg'; // Use a fish image for "F"
+                    spelling.innerText = "Fish";
+                    wordToPronounce = "Fish";
+                    pronunciation = "F for Fish";
+                    break;
+                case 'G':
+                    image.src = 'images/giraffe.jpg'; // Use a giraffe image for "G"
+                    spelling.innerText = "Giraffe";
+                    wordToPronounce = "Giraffe";
+                    pronunciation = "G for Giraffe";
+                    break;
+                case 'H':
+                    image.src = 'images/hat.jpg'; // Use a hat image for "H"
+                    spelling.innerText = "Hat";
+                    wordToPronounce = "Hat";
+                    pronunciation = "H for Hat";
+                    break;
+                case 'I':
+                    image.src = 'images/icecream.jpg'; // Use an ice cream image for "I"
+                    spelling.innerText = "Ice Cream";
+                    wordToPronounce = "Ice Cream";
+                    pronunciation = "I for Ice Cream";
+                    break;
+                case 'J':
+                    image.src = 'images/jellyfish.jpg'; // Use a jellyfish image for "J"
+                    spelling.innerText = "Jellyfish";
+                    wordToPronounce = "Jellyfish";
+                    pronunciation = "J for Jellyfish";
+                    break;
+                case 'K':
+                    image.src = 'images/kiwi.jpg'; // Use a kiwi image for "K"
+                    spelling.innerText = "Kiwi";
+                    wordToPronounce = "Kiwi";
+                    pronunciation = "K for Kiwi";
+                    break;
+                case 'L':
+                    image.src = 'images/lion.jpg'; // Use a lion image for "L"
+                    spelling.innerText = "Lion";
+                    wordToPronounce = "Lion";
+                    pronunciation = "L for Lion";
+                    break;
+                case 'M':
+                    image.src = 'images/mango.jpg'; // Use a mango image for "M"
+                    spelling.innerText = "Mango";
+                    wordToPronounce = "Mango";
+                    pronunciation = "M for Mango";
+                    break;
+                case 'N':
+                    image.src = 'images/nut.jpg'; // Use a nut image for "N"
+                    spelling.innerText = "Nut";
+                    wordToPronounce = "Nut";
+                    pronunciation = "N for Nut";
+                    break;
+                case 'O':
+                    image.src = 'images/ox.jpg'; // Use an ox image for "O"
+                    spelling.innerText = "Ox";
+                    wordToPronounce = "Ox";
+                    pronunciation = "O for Ox";
+                    break;
+                case 'P':
+                    image.src = 'images/pineapple.jpg'; // Use a pineapple image for "P"
+                    spelling.innerText = "Pineapple";
+                    wordToPronounce = "Pineapple";
+                    pronunciation = "P for Pineapple";
+                    break;
+                case 'Q':
+                    image.src = 'images/quilt.jpg'; // Use a quilt image for "Q"
+                    spelling.innerText = "Quilt";
+                    wordToPronounce = "Quilt";
+                    pronunciation = "Q for Quilt";
+                    break;
+                case 'R':
+                    image.src = 'images/rabbit.jpg'; // Use a rabbit image for "R"
+                    spelling.innerText = "Rabbit";
+                    wordToPronounce = "Rabbit";
+                    pronunciation = "R for Rabbit";
+                    break;
+                case 'S':
+                    image.src = 'images/sun.jpg'; // Use a sun image for "S"
+                    spelling.innerText = "Sun";
+                    wordToPronounce = "Sun";
+                    pronunciation = "S for Sun";
+                    break;
+                case 'T':
+                    image.src = 'images/tiger.jpg'; // Use a tiger image for "T"
+                    spelling.innerText = "Tiger";
+                    wordToPronounce = "Tiger";
+                    pronunciation = "T for Tiger";
+                    break;
+                case 'U':
+                    image.src = 'images/umbrella.jpg'; // Use an umbrella image for "U"
+                    spelling.innerText = "Umbrella";
+                    wordToPronounce = "Umbrella";
+                    pronunciation = "U for Umbrella";
+                    break;
+                case 'V':
+                    image.src = 'images/violin.jpg'; // Use a violin image for "V"
+                    spelling.innerText = "Violin";
+                    wordToPronounce = "Violin";
+                    pronunciation = "V for Violin";
+                    break;
+                case 'W':
+                    image.src = 'images/wolf.jpg'; // Use a wolf image for "W"
+                    spelling.innerText = "Wolf";
+                    wordToPronounce = "Wolf";
+                    pronunciation = "W for Wolf";
+                    break;
+                case 'X':
+                    image.src = 'images/xylophone.jpg'; // Use a xylophone image for "X"
+                    spelling.innerText = "Xylophone";
+                    wordToPronounce = "Xylophone";
+                    pronunciation = "X for Xylophone";
+                    break;
+                case 'Y':
+                    image.src = 'images/yacht.jpg'; // Use a yacht image for "Y"
+                    spelling.innerText = "Yacht";
+                    wordToPronounce = "Yacht";
+                    pronunciation = "Y for Yacht";
+                    break;
+                case 'Z':
+                    image.src = 'images/zebra.jpg'; // Use a zebra image for "Z"
+                    spelling.innerText = "Zebra";
+                    wordToPronounce = "Zebra";
+                    pronunciation = "Z for Zebra";
+                    break;
+                default:
+                    image.src = '';
+                    spelling.innerText = '';
+            }
+
+            // Display the image and spelling
+            imageContainer.style.display = 'flex';
+
+            // Pronounce the letter and word
+            speakWord(pronunciation);
+        }
+
+        // Function to pronounce the letter and word using SpeechSynthesis API
+        function speakWord(pronunciation) {
+            const utterance = new SpeechSynthesisUtterance(pronunciation);
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>

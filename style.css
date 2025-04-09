@@ -1,0 +1,99 @@
+/* General Body Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff; /* Light pastel blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styles */
+h1 {
+    background-color: #ff6347;  /* Tomato red */
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Letter Box */
+.letter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: #fff8dc; /* Light golden background */
+    border-radius: 15px;
+    margin-top: 30px;
+    font-size: 80px;
+    font-weight: bold;
+    color: #ff6347;  /* Tomato red */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.letter-box:hover {
+    background-color: #ffebcd;  /* Blanched almond */
+    transform: scale(1.05);
+}
+
+/* Image Container */
+.image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hidden by default */
+}
+
+/* Letter Buttons */
+.letter-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.letter-container button {
+    padding: 20px 40px;
+    font-size: 24px;
+    color: white;
+    background-color: #32cd32;  /* Lime green */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.letter-container button:hover {
+    background-color: #228b22;  /* Forest green */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .letter-box {
+        width: 150px;
+        height: 150px;
+        font-size: 60px;
+    }
+
+    .letter-container button {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
